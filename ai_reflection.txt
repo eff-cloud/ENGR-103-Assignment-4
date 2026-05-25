@@ -1,0 +1,38 @@
+AI Reflection:
+
+For this assignment, I used ChatGPT to review my dictionary program and
+suggest improvements based on my version of the code and the instructions
+
+I asked the AI to review my original implementation and suggest
+improvements that stayed at an ENGR 103 level while following the course
+style guide. The AI suggested reducing repeated code, improving function
+organization, and adding clearer comments explaining changes.
+
+Two things the AI did well: The AI identified repeated code in the three 
+lookup functions (handleDefinitionLookup, handleAudioLookup, and
+handlePronunciationLookup). It suggested combining them into a single
+performLookup() function. This reduced repeated code and better followed
+the DRY principle. The second thing is that the AI suggested creating 
+queryWordsJson() to combine the repeated API request logic used by 
+queryDefinition(), queryAudioUrl(), and queryPronunciation(). Previously, 
+each function repeated the same request, status check, and JSON parsing 
+steps because thats what I understood.
+
+Two potential problems or unclear items: Some AI suggestions became more 
+advanced than expected for ENGR 103. For example, the AI suggested using 
+function pointers in performLookup(). Although it worked correctly, I needed 
+to verify that I understood it well enough to explain it during the demo so 
+that means I would need to do a lot more research to properly impliment it.
+The second potnetial problem is that the AI initially suggested larger 
+refactoring changes that moved farther away from my original design document. 
+I had to adjust the solution so that it still matched my submitted design and 
+remained understandable.
+
+Would I trust this AI-generated code in a real project?
+
+Partially. The AI provided useful suggestions for organization and code
+reuse, but I would still verify all changes before using them. The AI was
+helpful for improving structure, but human review was really important to ensure
+the code stayed within assignment requirements and remained understandable. If 
+used AI, I would have to be very careful what it does so that it doesn't do something 
+wrong that I can't identify because I don't understand it.
